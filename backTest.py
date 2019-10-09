@@ -32,8 +32,8 @@ with open('XBTUSD.csv', 'r') as csv_file:
     data_list = (data_list[1:])
     data_list.reverse()
     csv_file.close()
-    ema_now_30 = float(data_list[0][32:]) * (smoothing_30 / (1 + 30))
-    ema_now_90 = float(data_list[0][32:]) * (smoothing_90 / (1 + 90))
+    ema_now_30 = float(data_list[0][32:]) * smoothing_30 
+    ema_now_90 = float(data_list[0][32:]) * smoothing_90
 
 for line in data_list:
 
